@@ -9,22 +9,25 @@ class Build : BuildPod {
 	
 	new make() {
 		podName = "afMicromod"
-		summary = "A wrapper around Micromod; a music player for MOD, S3M, and XM files."
-		version = Version([1,0,2])
-		
-		meta	= [	"org.name"		: "MuMart",
-					"org.uri"		: "https://sites.google.com/site/mumart/home/micromodibxm",
-					"proj.name"		: "MicroMod",
-					"vcs.name"		: "Subversion",
-               		"vcs.uri"		: "http://micromod.googlecode.com/svn/trunk/",
-               		"license.name"	: "BSD New"
-				  ]
-		
-		srcDirs = [`test/`, `fan/`, `fan/util/`]
-		depends = ["sys 1.0", "concurrent 1.0"]
-		resDirs = [`lib/java/ibxm-a61.jar`, `res/music/`]
+		summary = "A music player for MOD, S3M, and XM files"
+		version = Version("1.0.3")
 
-		docApi = true
-		docSrc = true
+		meta = [	
+			"proj.name"			: "Micromod",
+			"org.name"			: "MuMart",
+			"org.uri"			: "https://sites.google.com/site/mumart/home/micromodibxm",
+			"tags"				: "misc",
+			"repo.private"		: "true"
+		]
+
+		depends = [
+			"sys          1.0", 
+			"concurrent   1.0",
+
+			"afConcurrent 1.0.8 - 1.0"
+		]
+
+		srcDirs = [`fan/`]
+		resDirs = [`lib/java/ibxm-a61.jar`]
 	}
 }
