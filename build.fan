@@ -10,14 +10,14 @@ class Build : BuildPod {
 	new make() {
 		podName = "afMicromod"
 		summary = "A music player for MOD, S3M, and XM files"
-		version = Version("1.0.4")
+		version = Version("1.0.5")
 
 		meta = [	
 			"proj.name"			: "Micromod",
 			"org.name"			: "MuMart",
 			"org.uri"			: "https://sites.google.com/site/mumart/home/micromodibxm",
 			"tags"				: "misc",
-			"repo.private"		: "false"
+			"repo.private"		: "true"
 		]
 
 		depends = [
