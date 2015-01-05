@@ -46,3 +46,7 @@ C:\> fan Example.fan
 [afMicromod] Stopping `file:/.../MyTune.mod`
 ```
 
+## .mod Files?
+
+[.MOD files](http://en.wikipedia.org/wiki/MOD_%28file_format%29) are music files created by [Music Tracker Software](http://en.wikipedia.org/wiki/Music_tracker) such as [OctoMED](http://en.wikipedia.org/wiki/OctaMED). They were prominent in the Amiga DemoScene. See the [Equninox Slammer page](http://www.alienfactory.co.uk/equinox/slammer) for some example `.mod` files.
+
