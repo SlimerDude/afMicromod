@@ -10,14 +10,14 @@ class Build : BuildPod {
 	new make() {
 		podName = "afMicromod"
 		summary = "A music player for MOD, S3M, and XM files"
-		version = Version("1.0.5")
+		version = Version("1.0.4")
 
 		meta = [	
 			"proj.name"			: "Micromod",
 			"org.name"			: "MuMart",
 			"org.uri"			: "https://sites.google.com/site/mumart/home/micromodibxm",
-			"tags"				: "misc",
-			"repo.private"		: "true"
+			"repo.tags"			: "misc",
+			"repo.public"		: "true"
 		]
 
 		depends = [
@@ -28,6 +28,6 @@ class Build : BuildPod {
 		]
 
 		srcDirs = [`fan/`]
-		resDirs = [`lib/java/ibxm-a61.jar`]
+		resDirs = [`doc/`, `lib/java/ibxm-a61.jar`]
 	}
 }
