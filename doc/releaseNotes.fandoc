@@ -1,0 +1,12 @@
+Versions
+********
+
+v1.0.4
+------
+ - Chg: Revamped API.
+ - Chg: Replaced bespoke concurrency code with [Alien-Factory's Concurrent Library]`pod:afConcurrent`.
+
+ v1.0.2
+-------
+ - New: Initial release.
+

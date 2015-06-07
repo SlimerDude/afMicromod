@@ -1,8 +1,14 @@
-## Overview 
+#Micromod v1.0.4
+---
+[![Written in: Fantom](http://img.shields.io/badge/written%20in-Fantom-lightgray.svg)](http://fantom.org/)
+[![pod: v1.0.4](http://img.shields.io/badge/pod-v1.0.4-yellow.svg)](http://www.fantomfactory.org/pods/afMicromod)
+![Licence: MIT](http://img.shields.io/badge/licence-MIT-blue.svg)
 
-`Micromod` is a (Java only) music player for MOD, S3M, and XM files. It wraps the excellent [Micromod](https://sites.google.com/site/mumart/home/micromodibxm) by Martin Cameron.
+## Overview
 
-## Install 
+Micromod is a (Java only) music player for MOD, S3M, and XM files. It wraps the excellent [Micromod](https://sites.google.com/site/mumart/home/micromodibxm) by Martin Cameron.
+
+## Install
 
 Install `Micromod` with the Fantom Repository Manager ( [fanr](http://fantom.org/doc/docFanr/Tool.html#install) ):
 
@@ -12,39 +18,38 @@ To use in a [Fantom](http://fantom.org/) project, add a dependency to `build.fan
 
     depends = ["sys 1.0", ..., "afMicromod 1.0"]
 
-## Documentation 
+## Documentation
 
-Full API & fandocs are available on the [Status302 repository](http://repo.status302.com/doc/afMicromod/).
+Full API & fandocs are available on the [Fantom Pod Repository](http://pods.fantomfactory.org/pods/afMicromod/).
 
-## Quick Start 
+## Quick Start
 
-1). Create a text file called `Example.fan`, making sure the file `MyTune.mod` exists.
+1. Create a text file called `Example.fan`, making sure the file `MyTune.mod` exists:
 
-```
-using concurrent
-using afMicromod
+        using concurrent
+        using afMicromod
+        
+        class Example {
+        
+            Void main() {
+                player := Micromod(ActorPool(), File(`MyTune.mod`))
+                player.play(Channels.stereo)
+        
+                Actor.sleep(22sec)
+        
+                player.stop
+            }
+        }
 
-class Example {
-	
-    Void main() {
-        player := Micromod(ActorPool(), File(`MyTune.mod`))
-        player.play(Channels.stereo)
-		
-        Actor.sleep(22sec)
 
-        player.stop
-    }	
-}
-```
+2. Run `Example.fan` as a Fantom script from the command line:
 
-2). Run `Example.fan` as a Fantom script from the command line:
+        C:\> fan Example.fan
+        
+        [afMicromod] Playing `file:/.../MyTune.mod`
+        [afMicromod] Stopping `file:/.../MyTune.mod`
 
-```
-C:\> fan Example.fan
 
-[afMicromod] Playing `file:/.../MyTune.mod`
-[afMicromod] Stopping `file:/.../MyTune.mod`
-```
 
 ## .mod Files?
 

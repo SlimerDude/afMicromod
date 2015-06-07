@@ -4,6 +4,8 @@ using concurrent
 **  
 ** Sample usage:
 ** 
+**   syntax: fantom
+** 
 ** 	 player := Micromod(ActorPool(), File(`MyTune.mod`))
 **   player.play(Channels.stereo)
 **   Actor.sleep(30sec)
